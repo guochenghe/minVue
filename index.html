@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <p>{{name}}</p>
+        <p>{{name}}</p>
+        <p>{{age}}</p>
+        <p k-text="sex"></p>
+        <p k-html="btn"></p>
+        <p><input type="text" k-model="age"></p>
+        <button @click="handleme">点击</button>
+    </div>
+
+    <script src="./kvue-compiles.js"></script>
+    <script src="./kvue.js"></script>
+
+    <script>
+        var vm = new Kvue({
+            el: '#app',
+            data: {
+                name: 'luffy',
+                age: 18,
+                btn: '<button>雷浩啊</button>',
+                sex: 'woman'
+            },
+            methods: {
+                handleme() {
+                    this.age = 1
+                }
+            },
+        })
+    </script>
+</body>
+
+</html>

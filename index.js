@@ -30,7 +30,6 @@ class MyVue{
                 }
 
                 this.defineReactive(data,key,val)
-
                 
             }
         }
